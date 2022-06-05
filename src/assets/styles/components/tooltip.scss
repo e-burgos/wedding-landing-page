@@ -1,0 +1,9 @@
+.tooltip {
+  background: $cloud;
+  border: 1px solid $mist;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(45, 56, 65, 0.2);
+  border-radius: $borderRadius;
+  width: 340px;
+  padding: 20px;
+}

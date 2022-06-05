@@ -1,0 +1,263 @@
+@import 'variables.scss';
+@import 'typography.scss';
+@import 'spacing.scss';
+@import 'animation.scss';
+@import 'wedding.scss';
+@import 'components/landpage.scss';
+
+.App {
+  text-align: center;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseCloud {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes customSlideInLeft {
+  from {
+    transform: translate3d(-150%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes customSlideInRight {
+  from {
+    transform: translate3d(150%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.customSlideInLeft {
+  animation-name: customSlideInLeft;
+}
+
+.customSlideInRight {
+  animation-name: customSlideInRight;
+}
+
+#clouds {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #272b36 !important;
+}
+
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  position: relative;
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+
+  border-radius: 100px;
+  transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+
+$clouds: 10;
+
+@for $i from 0 through $clouds {
+  div.cloud:nth-child(#{$i + 1}) {
+    left: 100%;
+    top: random(100) / 100 * 90%;
+    transform: scale(random(2) - 0.5);
+    opacity: (random(40) / 100) + 0.3;
+    animation: moveclouds random(20) + 10 + s linear infinite;
+    z-index: random(4) + 2;
+  }
+}
+
+@keyframes moveclouds {
+  100% {
+    left: -10%;
+  }
+}
+
+/* carousel styling */
+
+.carousel-root {
+  outline: none;
+  width: 100%;
+  z-index: 30;
+  display: flex;
+
+  .carousel {
+    position: relative;
+
+    .control-arrow {
+      outline: 0;
+      border: 0;
+      background: none;
+      top: 50%;
+      margin-top: -13px;
+      font-size: 18px;
+    }
+
+    &.carousel-slider {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .slider-wrapper {
+      overflow: hidden;
+      margin: auto;
+      width: 100%;
+      transition: height 0.15s ease-in;
+
+      &.axis-horizontal .slider {
+        display: flex;
+
+        .slide {
+          flex-direction: column;
+          flex-flow: column;
+        }
+      }
+    }
+
+    .slider {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      list-style: none;
+      width: 100%;
+
+      &.animated {
+        transition: all 0.35s ease-in-out;
+      }
+    }
+
+    .slide {
+      min-width: 100%;
+      margin: 0;
+      position: relative;
+      text-align: center;
+    }
+  }
+}
+
+.carousel-buttons-wrapper {
+  width: 100%;
+  display: flex;
+  z-index: 30;
+  justify-content: center;
+  .carousel-button {
+    margin: 0px 10px;
+    min-width: 37px;
+    min-height: 9px;
+    width: 37px;
+    height: 9px;
+    background: #efefef;
+    border: 0.5px solid #4c1a45;
+    box-sizing: border-box;
+    border-radius: 39px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    &.selected {
+      background: #4c1a45;
+    }
+  }
+
+  &.scroll {
+    width: 90%;
+    display: flex;
+    border: 1.5px solid #4c1a45;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .carousel-button:first-child {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .carousel-button:last-child {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .carousel-button {
+      margin: 0px;
+      min-width: 0px;
+      border: none;
+      border-radius: 0px;
+      flex: 1;
+    }
+  }
+}

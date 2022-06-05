@@ -1,0 +1,163 @@
+//General
+
+.landpage-container {
+  max-width: 500px !important;
+  margin: 0 auto;
+
+  @media (min-width: 960px) {
+    max-width: 1300px !important;
+  }
+}
+
+// Searcher
+.landpage-searcher-title-spacing {
+  margin-bottom: 10px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 5px;
+  }
+}
+
+.landpage-searcher-subtitle {
+  font-family: $bodyFont;
+  font-style: normal;
+  font-weight: $bodyWeight;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0px;
+  padding: 0px;
+  max-width: 590px;
+
+  @media (max-width: $mobile) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.landpage-checkbox {
+  width: 24px !important;
+  height: 24px !important;
+  background-color: white !important;
+  border: 1.5px solid $mist !important;
+  box-sizing: border-box;
+  border-radius: $borderRadius !important;
+}
+
+.landpage-checkbox-checked {
+  border: 3px solid $capri !important;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-radius: $borderRadius !important;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='6' y='7' width='13' height='12'%3E%3Cpath d='M7.12242 12.4082L11.2912 16.5749L17.1224 8.24158' stroke='white' stroke-width='3'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Crect width='24' height='24' transform='translate(0.122437 0.408203)' fill='%23009BD7'/%3E%3Crect x='1.62244' y='1.9082' width='21' height='21' stroke='white' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  content: "";
+  background-position: center;
+}
+
+.landpage-checkbox-label {
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+// Expand Digital Brand
+
+.landing-page-digital-brand-text {
+  font-family: $bodyFont;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: $bodyColor;
+  margin: 0px;
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
+// Buy insurance
+
+.landing-buy-insurance-subtitle {
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: $wallStreet;
+  margin: 0px;
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 40px;
+  }
+}
+
+//Did you know
+
+.did-you-know-text {
+  font-family: $raleway;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  color: $wallStreet;
+
+  @media (max-width: $mobile) {
+    font-family: $raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: $wallStreet;
+  }
+}
+
+// General
+.landpage-background-grey {
+  background-color: $cloud;
+}
+
+.landpage-background-blue {
+  background-color: $capri;
+}
+
+.landpage-input {
+  max-width: 400px;
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.columnNumber {
+  font-family: $bodyFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 110%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  color: $wallStreet;
+  margin-right: 10px;
+  @media (max-width: $mobile) {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* General */
+$roboto: "Roboto";
+$mulish: "Mulish";
+$raleway: "Raleway";
+
+$titleFont: $mulish;
+$subtitleFont: $raleway;
+$bodyFont: $raleway;
+
+$titleWeight: 900;
+$subtitleWeight: 700;
+$labelWeight: 700;
+$bodyWeight: 400;
+$bodyLinkWeight: 700;
+$progressStepperWeight: 600;
+
+$titleColor: $wallStreet;
+$bodyColor: $wallStreet;
+$linkColor: $capri;
+
+/* Titles */
+$fontSizeH1: 3.5rem;
+$fontSizeH2: 2rem;
+$fontSizeH3: 1.375rem;
+$fontSizeH4: 1.375rem;
+$fontSizeH5: 1.125rem;
+
+$lineSpacingH1: 120%;
+$lineSpacingH2: 125%;
+$lineSpacingH3: 140%;
+$lineSpacingH4: 140%;
+
+$letterSpacingH5: 0.1rem;
+
+/* Body font */
+$fontSizeLabel: 1rem;
+$fontSizeBody: 1rem;
+$fontSizeProgressStepper: 0.875rem;
+$fontSizeBodyCopy: 1.125rem;
+$fontSizeBodyCopyLink: 1.125rem;
+$fontSizeBodyCopySmall: 1rem;
+$fontSizeFooter: 1rem;
+$fontSizeBodyCopyXSmall: 0.875rem;
+
+$lineSpacingBodyCopy: 150%;
+$lineSpacingBodyCopyLink: $lineSpacingBodyCopy;
+$lineSpacingBodyCopySmall: 150%;
+$lineSpacingFooter: 150%;
+$lineSpacingBodyCopyXSmall: 150%;
+
+$letterSpacingProgressStepper: 0.05em;

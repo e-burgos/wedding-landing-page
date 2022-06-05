@@ -1,0 +1,50 @@
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  opacity: 0.6;
+}
+
+.modal-backdrop-independent-agent {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-container {
+  background: #ffffff;
+  border: 1px solid $mist;
+  box-shadow: 2px 2px 4px rgba(45, 56, 65, 0.2);
+  border-radius: $borderRadius;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px 30px 10px;
+  outline: none;
+  @media (min-width: $mobile) {
+    top: 50% !important;
+    left: 50% !important;
+    max-height: 80vh !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+    width: 700px !important;
+    padding: 30px 10px 30px 10px !important;
+  }
+}
+
+.modal-container-independent-agent {
+  border-radius: $borderRadius;
+  background: $cloud;
+  border: 1px solid $mist;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(45, 56, 65, 0.2);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  position: absolute;
+  box-sizing: border-box;
+  outline: none;
+  top: 50% !important;
+  left: 50% !important;
+  max-height: 80vh !important;
+  height: auto !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 345px !important;
+  width: 95% !important;
+  padding: 20px !important;
+}

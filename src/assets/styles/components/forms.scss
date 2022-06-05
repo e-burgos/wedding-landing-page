@@ -1,0 +1,126 @@
+.input {
+  background: $white !important;
+  border: 1.5px solid $mist !important;
+  box-sizing: border-box !important;
+  border-radius: $borderRadius !important;
+  padding: 10px !important;
+  height: 45px !important;
+  @extend .fieldset-body-mobile;
+}
+
+.input:focus {
+  outline: none !important;
+  border: 1.5px solid $wallStreet !important;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.input::placeholder,
+.input-placeholder {
+  @extend .fieldset-body-mobile;
+  @extend .color-steel;
+}
+
+.inputError {
+  border: 1.5px solid $raspberry;
+}
+
+.inputError:focus {
+  border: 1.5px solid $raspberry !important;
+  outline: none !important;
+}
+
+//Error Msg
+
+.starForm {
+  color: $marigold;
+  font-size: 30px;
+}
+
+.desactivatedStarForm {
+  color: $mist;
+  font-size: 30px;
+}
+
+.msgErrorForm {
+  @extend .fieldset-body;
+  @extend .color-error;
+}
+
+//Star Input Form
+.errorStarForm {
+  @extend .color-error;
+}
+
+//Textarea
+
+.textArea {
+  width: calc(100% - 20px);
+  border-radius: $borderRadius;
+  resize: none;
+  height: 90px;
+  padding: 10px;
+  @extend .fieldset-body;
+  border: 1.5px solid $mist;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textArea:focus {
+  border: 1.5px solid $wallStreet;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none !important;
+}
+
+.textArea::placeholder {
+  @extend .fieldset-body;
+  @extend .color-steel;
+}
+
+.textAreaError {
+  border: 1.5px solid $raspberry;
+}
+
+.textAreaError:focus {
+  border: 1.5px solid $raspberry !important;
+  outline: none !important;
+}
+
+.textAreaCounter {
+  @extend .fieldset-body;
+  @extend .color-steel;
+  @extend .text-right;
+  @extend .pl-5;
+  @extend .pr-5;
+}
+
+.textAreaCounter.color-error {
+  @extend .color-error;
+}
+
+//Checkbox
+
+.checkbox {
+  color: $capri !important;
+}
+
+.checkbox > [class*="checked"] {
+  color: $capri !important;
+}
+
+.checkbox-label {
+  color: $wallStreet !important;
+  font-family: $raleway !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  letter-spacing: 0px !important;
+  padding-top: 2px !important;
+}
+
+.checked {
+}
+
+// .grecaptcha-badge{
+//     bottom: 136px!important;
+// }

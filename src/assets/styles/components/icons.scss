@@ -1,0 +1,23 @@
+.icon-button {
+  color: $wallStreet;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+}
+
+//We need the response of the designers
+.icon-button:hover,
+.icon-button:focus {
+  color: $wallStreet;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+}
+
+.icon-30 {
+  font-size: 30px;
+}

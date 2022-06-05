@@ -1,0 +1,402 @@
+body {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none !important;
+}
+
+.gradientCookieName {
+  background: linear-gradient(
+    0deg,
+    rgba(199, 27, 102, 1) 0%,
+    rgba(200, 28, 103, 1) 40%,
+    rgb(209, 101, 115) 100%
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: white;
+}
+
+.gradientChocolateName {
+  background: linear-gradient(
+    0deg,
+    rgb(60, 40, 4) 0%,
+    rgba(60, 40, 4, 1) 40%,
+    rgb(173, 79, 35) 100%
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.2em transparent;
+  color: white;
+}
+
+.fontRoboto {
+  font-family: $roboto;
+}
+
+//h1
+.header-text {
+  font-family: $titleFont;
+  font-weight: $titleWeight;
+  line-height: $lineSpacingH1;
+  font-size: $fontSizeH1;
+  color: $titleColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeH1Mobile;
+    line-height: $lineSpacingH1Mobile;
+  }
+}
+
+//h2
+.page-header {
+  font-family: $titleFont;
+  font-weight: $titleWeight;
+  line-height: $lineSpacingH2;
+  font-size: $fontSizeH2;
+  color: $titleColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeH2Mobile;
+    line-height: $lineSpacingH2Mobile;
+  }
+}
+
+.page-header-mobile {
+  @extend .page-header;
+  font-size: $fontSizeH2Mobile;
+  line-height: $lineSpacingH2Mobile;
+}
+
+//h3
+.section-header {
+  font-family: $titleFont;
+  font-weight: $titleWeight;
+  line-height: $lineSpacingH3;
+  font-size: $fontSizeH3;
+  color: $titleColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeH3Mobile;
+    line-height: $lineSpacingH3Mobile;
+  }
+}
+
+.section-header-mobile {
+  @extend .section-header;
+  font-size: $fontSizeH3Mobile;
+  line-height: $lineSpacingH3Mobile;
+}
+
+//h4
+.subheader,
+.button-text {
+  font-family: $subtitleFont;
+  font-weight: $subtitleWeight;
+  line-height: $lineSpacingH4;
+  font-size: $fontSizeH4;
+  color: $titleColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeH4Mobile;
+    line-height: $lineSpacingH4Mobile;
+  }
+}
+
+//h5
+.section-subheader {
+  font-family: $subtitleFont;
+  font-weight: $subtitleWeight;
+  font-size: $fontSizeH5;
+  letter-spacing: $letterSpacingH5;
+  text-transform: uppercase;
+  color: $titleColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeH5Mobile;
+    letter-spacing: $letterSpacingH5Mobile;
+  }
+}
+
+.fieldset-label {
+  font-family: $bodyFont;
+  font-weight: $labelWeight;
+  font-size: $fontSizeLabel;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeLabelMobile;
+  }
+}
+
+.fieldset-label-mobile {
+  @extend .fieldset-label;
+  font-size: $fontSizeLabelMobile;
+}
+
+.fieldset-body,
+.input::placeholder {
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  font-size: $fontSizeBody;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeBodyMobile;
+  }
+}
+
+.fieldset-body-mobile {
+  @extend .fieldset-body;
+  font-size: $fontSizeBodyMobile;
+}
+
+.progress-stepper {
+  font-family: $bodyFont;
+  font-weight: $progressStepperWeight;
+  font-size: $fontSizeProgressStepper;
+  letter-spacing: $letterSpacingProgressStepper;
+  text-transform: uppercase;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeProgressStepperMobile;
+    letter-spacing: $letterSpacingProgressStepperMobile;
+  }
+}
+
+.body-copy {
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  font-size: $fontSizeBodyCopy;
+  line-height: $lineSpacingBodyCopy;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  @media (max-width: $mobile) {
+    font-size: $fontSizeBodyCopyMobile;
+    line-height: $lineSpacingBodyCopyMobile;
+  }
+}
+.body-copy-mobile {
+  @extend .body-copy;
+  font-size: $fontSizeBodyCopyMobile;
+  line-height: $lineSpacingBodyCopyMobile;
+}
+
+.body-copy-link,
+.button-link {
+  font-family: $bodyFont;
+  font-weight: $bodyLinkWeight;
+  font-size: $fontSizeBodyCopyLink;
+  line-height: $lineSpacingBodyCopyLink;
+  color: $linkColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeBodyCopyLinkMobile;
+    line-height: $lineSpacingBodyCopyLinkMobile;
+  }
+}
+
+.small-body-copy,
+.footer {
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  font-size: $fontSizeBodyCopySmall;
+  line-height: $lineSpacingBodyCopySmall;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeBodyCopySmallMobile;
+    line-height: $lineSpacingBodyCopySmallMobile;
+  }
+}
+
+.small-body-copy-mobile {
+  @extend .small-body-copy;
+  font-size: $fontSizeBodyCopySmallMobile;
+  line-height: $lineSpacingBodyCopySmallMobile;
+}
+
+.xsmall-body-copy {
+  font-family: $bodyFont;
+  font-weight: $bodyWeight;
+  font-size: $fontSizeBodyCopyXSmall;
+  line-height: $lineSpacingBodyCopyXSmall;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeBodyCopyXSmallMobile;
+    line-height: $lineSpacingBodyCopyXSmallMobile;
+  }
+}
+
+.xsmall-body-copy-mobile {
+  @extend .xsmall-body-copy;
+  font-size: $fontSizeBodyCopyXSmallMobile;
+  line-height: $lineSpacingBodyCopyXSmallMobile;
+}
+
+.font-mulish {
+  font-family: $mulish !important;
+}
+
+.font-raleway {
+  font-family: $raleway !important;
+}
+
+.color-error {
+  color: $raspberry !important;
+}
+
+.color-white {
+  color: $white !important;
+}
+
+.color-wallstreet {
+  color: $wallStreet !important;
+}
+
+.color-capri {
+  color: $capri !important;
+}
+
+.color-blueprint {
+  color: $blueprint !important;
+}
+
+.color-steel {
+  color: $steel !important;
+}
+
+.color-midnight {
+  color: $midnight !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-bold {
+  font-weight: 700 !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-capitalize-first-word:first-letter {
+  text-transform: capitalize !important;
+}
+
+@mixin fieldset-label-mixin() {
+  font-family: $bodyFont;
+  font-weight: $labelWeight;
+  font-size: $fontSizeLabel;
+  color: $bodyColor;
+  margin: 0px;
+  padding: 0px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+
+  @media (max-width: $mobile) {
+    font-size: $fontSizeLabelMobile;
+  }
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.font-25 {
+  font-size: 25px !important;
+}
+
+.font-32 {
+  font-size: 32px !important;
+}
