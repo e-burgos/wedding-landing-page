@@ -1,7 +1,7 @@
-import portada from '../assets/images/fiesta/bg.jpeg';
-import portadaM from '../assets/images/fiesta/bgM.jpeg';
-import weddingGif from '../assets/images/fiesta/party2.gif';
-import whiteCard from '../assets/images/fiesta/card.png';
+import portada from "../assets/images/party/bg.jpeg";
+import portadaM from "../assets/images/party/bgM.jpeg";
+import weddingGif from "../assets/images/party/party2.gif";
+import whiteCard from "../assets/images/party/card.png";
 
 const bg = new Image();
 bg.src = portada;
@@ -13,12 +13,12 @@ const card = new Image();
 card.src = whiteCard;
 
 export const partySection = {
-  bg: {
-    bg: bg.src,
-    bgM: bgM.src,
-  },
-  icons: {
-    gif: gif.src,
-    card: card.src,
-  },
+	bg: {
+		bg: bg.src,
+		bgM: bgM.src,
+	},
+	icons: {
+		gif: gif.src,
+		card: card.src,
+	},
 };
