@@ -1,9 +1,9 @@
-@import 'variables.scss';
-@import 'typography.scss';
-@import 'spacing.scss';
-@import 'animation.scss';
-@import 'wedding.scss';
-@import 'components/landpage.scss';
+@import "variables.scss";
+@import "typography.scss";
+@import "spacing.scss";
+@import "animation.scss";
+@import "wedding.scss";
+@import "components/landpage.scss";
 
 .App {
   text-align: center;
@@ -112,7 +112,7 @@
 
 .cloud:before,
 .cloud:after {
-  content: '';
+  content: "";
   position: absolute;
   background: #fff;
   width: 100px;
@@ -222,24 +222,23 @@ $clouds: 10;
   justify-content: center;
   .carousel-button {
     margin: 0px 10px;
-    min-width: 37px;
     min-height: 9px;
-    width: 37px;
+    max-width: 10%;
     height: 9px;
     background: #efefef;
-    border: 0.5px solid #4c1a45;
+    border: 0.5px solid #bf862d;
     box-sizing: border-box;
     border-radius: 39px;
     transform: matrix(1, 0, 0, -1, 0, 0);
     &.selected {
-      background: #4c1a45;
+      background-image: linear-gradient(to bottom right, #bf862d, #ecc878);
     }
   }
 
   &.scroll {
     width: 90%;
     display: flex;
-    border: 1.5px solid #4c1a45;
+    border: 1.5px solid #bf862d;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;

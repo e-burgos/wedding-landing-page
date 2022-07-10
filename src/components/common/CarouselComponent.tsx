@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
 
 interface CarouselProps {
   className?: string;
@@ -16,19 +16,36 @@ interface ButtonRendererProps {
   scrollButtons?: boolean;
 }
 
-const ButtonRenderer = ({ index, isSelected, selectIndex, scrollButtons }: ButtonRendererProps) => {
+const ButtonRenderer = ({
+  index,
+  isSelected,
+  selectIndex,
+  scrollButtons,
+}: ButtonRendererProps) => {
   if (scrollButtons) {
     return (
       // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-      <div className={`carousel-button ${isSelected ? 'selected' : ''}`} onClick={() => selectIndex(index)}></div>
+      <div
+        className={`carousel-button ${isSelected ? "selected" : ""}`}
+        onClick={() => selectIndex(index)}
+      ></div>
     );
   }
   return (
-    <button className={`carousel-button ${isSelected ? 'selected' : ''}`} onClick={() => selectIndex(index)}></button>
+    <button
+      className={`carousel-button ${isSelected ? "selected" : ""}`}
+      onClick={() => selectIndex(index)}
+    ></button>
   );
 };
 
-const CarouselComponent = ({ className, children, scrollButtons, classNameButtons, currentIndex }: CarouselProps) => {
+const CarouselComponent = ({
+  className,
+  children,
+  scrollButtons,
+  classNameButtons,
+  currentIndex,
+}: CarouselProps) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const updateCarousel = (index: number) => {
@@ -41,7 +58,7 @@ const CarouselComponent = ({ className, children, scrollButtons, classNameButton
   return (
     <>
       <Carousel
-        className={className ?? ''}
+        className={className ?? ""}
         infiniteLoop
         showArrows={false}
         showThumbs={false}
@@ -50,10 +67,15 @@ const CarouselComponent = ({ className, children, scrollButtons, classNameButton
         selectedItem={currentSlide}
         onChange={updateCarousel}
         preventMovementUntilSwipeScrollTolerance={true}
-        swipeScrollTolerance={40}>
+        swipeScrollTolerance={40}
+      >
         {children}
       </Carousel>
-      <div className={`carousel-buttons-wrapper ${classNameButtons ?? ''}  ${scrollButtons ? 'scroll' : ''}`}>
+      <div
+        className={`carousel-buttons-wrapper ${classNameButtons ?? ""}  ${
+          scrollButtons ? "scroll" : ""
+        }`}
+      >
         {children.map((c, i) => {
           return (
             <ButtonRenderer
