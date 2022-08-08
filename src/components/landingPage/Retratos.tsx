@@ -194,7 +194,7 @@ const Retratos = () => {
             <span className={classes.title}>{"#ximeytucu"}</span>
             <span className={classes.text}>
               {
-                "Construyamos juntos este momento único, incluí el hashtag en tus posts y compartir con nosotros tus recuerdos"
+                "Construyamos juntos este momento único, incluí el hashtag en tus posts y compartí con nosotros tus recuerdos"
               }
             </span>
           </div>

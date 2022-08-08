@@ -190,7 +190,7 @@ const Regalos = () => {
           <div className={classes.topContainer}>
             <span className={classes.title}>{"Regalos"}</span>
             <span className={classes.text}>
-              {"Si querés regalarnos algo más que tu hermosa presencia..."}
+              {"Si querés regalarnos algo más que tu presencia..."}
             </span>
           </div>
 

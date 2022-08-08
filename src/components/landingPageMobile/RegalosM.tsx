@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   background: {
     margin: "0 auto",
-    backgroundImage: `url(${giftsSection.bg.bg})`,
+    backgroundImage: `url(${giftsSection.bg.bgM})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",
@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     backgroundImage: "linear-gradient(to bottom right, #BF862D, #ECC878)",
     width: "100%",
+    opacity: "0.8",
     borderRadius: "15px",
     margin: "15px 0px",
     padding: "15px 20px",
@@ -174,7 +175,7 @@ const RegalosM = () => {
           <div className={classes.topContainer}>
             <span className={classes.title}>{"Regalos"}</span>
             <span className={classes.text}>
-              {"Si querés regalarnos algo más que tu hermosa presencia..."}
+              {"Si querés regalarnos algo más que tu presencia..."}
             </span>
           </div>
 

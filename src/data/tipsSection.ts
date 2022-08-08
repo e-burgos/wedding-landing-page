@@ -32,6 +32,21 @@ export const tipsSection = {
   },
   cards: [
     {
+      name: "Dress Code",
+      icon: dress.src,
+      text: "Una orientación para tu vestuario",
+      textButton: "Ver más",
+      info: "info de la tarjeta",
+      backInfo: {
+        info1:
+          "Apostamos por un dress code elegante, queremos verte en tu mejor versión!",
+        info2: "",
+        info3: "",
+        textButton: "Volver",
+        link: "#",
+      },
+    },
+    {
       name: "Música",
       icon: music.src,
       text: "¿Cuál es la canción que no debe faltar en la fiesta?",
@@ -43,21 +58,6 @@ export const tipsSection = {
         info3: "",
         textButton: "Agregar canción",
         link: "https://forms.gle/4MUdJdcSEzkmYJ7fA",
-      },
-    },
-    {
-      name: "Dress Code",
-      icon: dress.src,
-      text: "Una orientación para tu vestuario",
-      textButton: "Ver más",
-      info: "info de la tarjeta",
-      backInfo: {
-        info1:
-          "Apostamos por un dress code elegante, esperamos verte en tu mejor versión",
-        info2: "",
-        info3: "",
-        textButton: "Volver",
-        link: "#",
       },
     },
     {
