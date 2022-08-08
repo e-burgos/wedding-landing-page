@@ -1,32 +1,463 @@
-import portada from "../assets/images/pictures/bg.jpeg";
-import portadaM from "../assets/images/pictures/bgM.jpeg";
-import iconLineal from "../assets/images/pictures/img_linea01.svg";
-import weddingGig from "../assets/images/pictures/weddingGig.gif";
+import portada from "../assets/images/pictures/bg.webp";
+import portadaM from "../assets/images/pictures/bgM.webp";
+import p01 from "../assets/images/pictures/photos/p01.webp";
+import p02 from "../assets/images/pictures/photos/p02.webp";
+import p03 from "../assets/images/pictures/photos/p03.webp";
+import p04 from "../assets/images/pictures/photos/p04.webp";
+import p05 from "../assets/images/pictures/photos/p05.webp";
+import p06 from "../assets/images/pictures/photos/p06.webp";
+import p07 from "../assets/images/pictures/photos/p07.webp";
+import p08 from "../assets/images/pictures/photos/p08.webp";
+import p09 from "../assets/images/pictures/photos/p09.webp";
+import p10 from "../assets/images/pictures/photos/p10.webp";
+import p11 from "../assets/images/pictures/photos/p11.webp";
+import p12 from "../assets/images/pictures/photos/p12.webp";
+import p13 from "../assets/images/pictures/photos/p13.webp";
+import p14 from "../assets/images/pictures/photos/p14.webp";
+import p15 from "../assets/images/pictures/photos/p15.webp";
+import p16 from "../assets/images/pictures/photos/p16.webp";
+import p17 from "../assets/images/pictures/photos/p17.webp";
+import p18 from "../assets/images/pictures/photos/p18.webp";
+import p19 from "../assets/images/pictures/photos/p19.webp";
+import p20 from "../assets/images/pictures/photos/p20.webp";
+import p21 from "../assets/images/pictures/photos/p21.webp";
+import p22 from "../assets/images/pictures/photos/p22.webp";
+import p23 from "../assets/images/pictures/photos/p23.webp";
+import p24 from "../assets/images/pictures/photos/p24.webp";
+import p25 from "../assets/images/pictures/photos/p25.webp";
+import p26 from "../assets/images/pictures/photos/p26.webp";
+import p27 from "../assets/images/pictures/photos/p27.webp";
+import p28 from "../assets/images/pictures/photos/p28.webp";
+import p29 from "../assets/images/pictures/photos/p29.webp";
+import p30 from "../assets/images/pictures/photos/p30.webp";
+import p31 from "../assets/images/pictures/photos/p31.webp";
+import p32 from "../assets/images/pictures/photos/p32.webp";
+import p33 from "../assets/images/pictures/photos/p33.webp";
+import p34 from "../assets/images/pictures/photos/p34.webp";
+import p35 from "../assets/images/pictures/photos/p35.webp";
+import p36 from "../assets/images/pictures/photos/p36.webp";
+import p37 from "../assets/images/pictures/photos/p37.webp";
+import p38 from "../assets/images/pictures/photos/p38.webp";
+import p39 from "../assets/images/pictures/photos/p39.webp";
+import p40 from "../assets/images/pictures/photos/p40.webp";
 
 const bg = new Image();
 bg.src = portada;
 const bgM = new Image();
 bgM.src = portadaM;
-const gif = new Image();
-gif.src = weddingGig;
+
+const img01 = new Image();
+img01.src = p01;
+const img02 = new Image();
+img02.src = p02;
+const img03 = new Image();
+img03.src = p03;
+const img04 = new Image();
+img04.src = p04;
+const img05 = new Image();
+img05.src = p05;
+const img06 = new Image();
+img06.src = p06;
+const img07 = new Image();
+img07.src = p07;
+const img08 = new Image();
+img08.src = p08;
+const img09 = new Image();
+img09.src = p09;
+const img10 = new Image();
+img10.src = p10;
+
+const img11 = new Image();
+img11.src = p11;
+const img12 = new Image();
+img12.src = p12;
+const img13 = new Image();
+img13.src = p13;
+const img14 = new Image();
+img14.src = p14;
+const img15 = new Image();
+img15.src = p15;
+const img16 = new Image();
+img16.src = p16;
+const img17 = new Image();
+img17.src = p17;
+const img18 = new Image();
+img18.src = p18;
+const img19 = new Image();
+img19.src = p19;
+const img20 = new Image();
+img20.src = p20;
+
+const img21 = new Image();
+img21.src = p21;
+const img22 = new Image();
+img22.src = p22;
+const img23 = new Image();
+img23.src = p23;
+const img24 = new Image();
+img24.src = p24;
+const img25 = new Image();
+img25.src = p25;
+const img26 = new Image();
+img26.src = p26;
+const img27 = new Image();
+img27.src = p27;
+const img28 = new Image();
+img28.src = p28;
+const img29 = new Image();
+img29.src = p29;
+const img30 = new Image();
+img30.src = p30;
+
+const img31 = new Image();
+img31.src = p31;
+const img32 = new Image();
+img32.src = p32;
+const img33 = new Image();
+img33.src = p33;
+const img34 = new Image();
+img34.src = p34;
+const img35 = new Image();
+img35.src = p35;
+const img36 = new Image();
+img36.src = p36;
+const img37 = new Image();
+img37.src = p37;
+const img38 = new Image();
+img38.src = p38;
+const img39 = new Image();
+img39.src = p39;
+const img40 = new Image();
+img40.src = p40;
 
 export const picturesSection = {
+  linkHashtags: "https://www.instagram.com/explore/tags/ximeytucu/",
   bg: {
     bg: bg.src,
     bgM: bgM.src,
   },
-  img: {
-    lineal: iconLineal,
-    gif: gif.src,
-  },
   photos: [
     {
-      id: 1,
-      img: bg.src,
+      id: "01",
+      img: img01.src,
     },
     {
-      id: 2,
-      img: bg.src,
+      id: "02",
+      img: img02.src,
+    },
+    {
+      id: "03",
+      img: img03.src,
+    },
+    {
+      id: "04",
+      img: img04.src,
+    },
+    {
+      id: "05",
+      img: img05.src,
+    },
+    {
+      id: "06",
+      img: img06.src,
+    },
+    {
+      id: "07",
+      img: img07.src,
+    },
+    {
+      id: "08",
+      img: img08.src,
+    },
+    {
+      id: "09",
+      img: img09.src,
+    },
+    {
+      id: "10",
+      img: img10.src,
+    },
+    {
+      id: "11",
+      img: img11.src,
+    },
+    {
+      id: "12",
+      img: img12.src,
+    },
+    {
+      id: "13",
+      img: img13.src,
+    },
+    {
+      id: "14",
+      img: img14.src,
+    },
+    {
+      id: "15",
+      img: img15.src,
+    },
+    {
+      id: "16",
+      img: img16.src,
+    },
+    {
+      id: "17",
+      img: img17.src,
+    },
+    {
+      id: "18",
+      img: img18.src,
+    },
+    {
+      id: "19",
+      img: img19.src,
+    },
+    {
+      id: "20",
+      img: img20.src,
+    },
+    {
+      id: "21",
+      img: img21.src,
+    },
+    {
+      id: "22",
+      img: img22.src,
+    },
+    {
+      id: "23",
+      img: img23.src,
+    },
+    {
+      id: "24",
+      img: img24.src,
+    },
+    {
+      id: "25",
+      img: img25.src,
+    },
+    {
+      id: "26",
+      img: img26.src,
+    },
+    {
+      id: "27",
+      img: img27.src,
+    },
+    {
+      id: "28",
+      img: img28.src,
+    },
+    {
+      id: "29",
+      img: img29.src,
+    },
+    {
+      id: "30",
+      img: img30.src,
+    },
+    {
+      id: "31",
+      img: img31.src,
+    },
+    {
+      id: "32",
+      img: img32.src,
+    },
+    {
+      id: "33",
+      img: img33.src,
+    },
+    {
+      id: "34",
+      img: img34.src,
+    },
+    {
+      id: "35",
+      img: img35.src,
+    },
+    {
+      id: "36",
+      img: img36.src,
+    },
+    {
+      id: "37",
+      img: img37.src,
+    },
+    {
+      id: "38",
+      img: img38.src,
+    },
+    {
+      id: "39",
+      img: img39.src,
+    },
+    {
+      id: "40",
+      img: img40.src,
+    },
+  ],
+  photosMobile: [
+    {
+      id: "01",
+      img: img01.src,
+    },
+    {
+      id: "02",
+      img: img02.src,
+    },
+    {
+      id: "03",
+      img: img03.src,
+    },
+    // {
+    //   id: "04",
+    //   img: img04.src,
+    // },
+    {
+      id: "05",
+      img: img05.src,
+    },
+    {
+      id: "06",
+      img: img06.src,
+    },
+    {
+      id: "07",
+      img: img07.src,
+    },
+    {
+      id: "08",
+      img: img08.src,
+    },
+    {
+      id: "09",
+      img: img09.src,
+    },
+    {
+      id: "10",
+      img: img10.src,
+    },
+    {
+      id: "11",
+      img: img11.src,
+    },
+    {
+      id: "12",
+      img: img12.src,
+    },
+    {
+      id: "13",
+      img: img13.src,
+    },
+    {
+      id: "14",
+      img: img14.src,
+    },
+    {
+      id: "15",
+      img: img15.src,
+    },
+    {
+      id: "16",
+      img: img16.src,
+    },
+    {
+      id: "17",
+      img: img17.src,
+    },
+    {
+      id: "18",
+      img: img18.src,
+    },
+    {
+      id: "19",
+      img: img19.src,
+    },
+    {
+      id: "20",
+      img: img20.src,
+    },
+    {
+      id: "21",
+      img: img21.src,
+    },
+    {
+      id: "22",
+      img: img22.src,
+    },
+    {
+      id: "23",
+      img: img23.src,
+    },
+    // {
+    //   id: "24",
+    //   img: img24.src,
+    // },
+    {
+      id: "25",
+      img: img25.src,
+    },
+    {
+      id: "26",
+      img: img26.src,
+    },
+    // {
+    //   id: "27",
+    //   img: img27.src,
+    // },
+    // {
+    //   id: "28",
+    //   img: img28.src,
+    // },
+    // {
+    //   id: "29",
+    //   img: img29.src,
+    // },
+    {
+      id: "30",
+      img: img30.src,
+    },
+    {
+      id: "31",
+      img: img31.src,
+    },
+    {
+      id: "32",
+      img: img32.src,
+    },
+    {
+      id: "33",
+      img: img33.src,
+    },
+    // {
+    //   id: "34",
+    //   img: img34.src,
+    // },
+    // {
+    //   id: "35",
+    //   img: img35.src,
+    // },
+    // {
+    //   id: "36",
+    //   img: img36.src,
+    // },
+    // {
+    //   id: "37",
+    //   img: img37.src,
+    // },
+    {
+      id: "38",
+      img: img38.src,
+    },
+    {
+      id: "39",
+      img: img39.src,
+    },
+    {
+      id: "40",
+      img: img40.src,
     },
   ],
 };

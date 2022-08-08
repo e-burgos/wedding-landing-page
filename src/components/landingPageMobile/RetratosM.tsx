@@ -1,14 +1,8 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
-import {
-  formatInitialData,
-  FormatPost,
-  picturesSection,
-} from "../../data/picturesSection";
-import { useIntersectionObserver } from "../../hooks/IntersectionObserver.hook";
+import { picturesSection } from "../../data/picturesSection";
 import CarouselComponent from "../common/CarouselComponent";
-import { useInstagraApi } from "../../hooks/useInstagramApi";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     backgroundImage: `url(${picturesSection.bg.bgM})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
     height: "100vh",
     zIndex: -2,
     display: "flex",
@@ -44,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     lineHeight: "10px",
     marginTop: "10px",
-    marginBottom: "10px",
+    marginBottom: "40px",
     zIndex: 10,
   },
   text: {
@@ -52,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#ffffff",
     fontSize: "12pt",
     textAlign: "center",
-    padding: "0px 30px",
+    width: "80%",
     zIndex: 10,
   },
   cardsContainer: {
@@ -68,9 +63,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     backgroundImage: "linear-gradient(to bottom right, #BF862D, #ECC878)",
-    width: "300px",
+    width: "90%",
     borderRadius: "15px",
-    margin: "20px",
     padding: "25px",
     boxSizing: "border-box",
   },
@@ -94,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "12px",
     border: "1px solid#E0D6B2",
     color: "#BF862D",
+    background: "white",
     fontSize: "12pt",
     textAlign: "center",
     width: "90%",
@@ -117,16 +112,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardIcon: {
-    width: "280px",
+    maxWidth: "100%",
+    maxHeight: "36vh",
     borderRadius: "12px",
+    marginBottom: "20px",
   },
   mainContainer: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: "10%",
-    marginRight: "10%",
+    width: "100%",
     zIndex: 10,
   },
   leftContainer: {
@@ -150,92 +146,38 @@ const useStyles = makeStyles((theme) => ({
 
 const RetratosM = () => {
   const classes = useStyles();
-  const refSection = useRef(null);
-  const [index, setIndex] = useState<number>(0);
-  const [desc, setDesc] = useState<string>("");
-  const [data, setData] = useState<FormatPost[]>(formatInitialData);
-
-  const { data: posts, dataSuccess } = useInstagraApi(
-    "http://localhost:4000/hashtag_post",
-    //"https://instagram47.p.rapidapi.com/hashtag_post?hashtag=ximeytucu",
-    false,
-    1000 * 60 * 1
-  );
-
-  const isSectionVisible = useIntersectionObserver(
-    refSection,
-    { threshold: 0 },
-    true
-  );
-
-  const handleDesc = (index: number) => {
-    setDesc(
-      `${
-        data[index].description.length > 90
-          ? `${data[index].description.substring(0, 90)}...`
-          : data[index].description
-      }`
-    );
-  };
-
-  useEffect(() => {
-    handleDesc(index);
-    if (dataSuccess) setData(posts);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, dataSuccess]);
-
-  console.log(posts);
+  const data = picturesSection.photos;
 
   return (
-    <div className={classes.root} id="page1">
+    <div className={classes.root} id="retratos">
       <Grid className={classes.background}>
         <div className={classes.mainContainer}>
           <div className={classes.leftContainer}>
             <span className={classes.title}>{"#ximeytucu"}</span>
+            <span className={classes.text}>
+              {
+                "Construyamos juntos este momento único, incluí el hashtag en tus posts y compartir con nosotros tus recuerdos"
+              }
+            </span>
           </div>
           {data.length !== 0 && (
-            <CarouselComponent currentIndex={setIndex}>
-              {data.map((card) => (
-                <div className={classes.cardsContainer} key={card.id}>
+            <CarouselComponent scrollButtons>
+              {data.map((photo) => (
+                <div key={photo.id} className={classes.cardsContainer}>
                   <div className={classes.card}>
-                    <span className={classes.text}>
-                      {
-                        "Construyamos juntos este momento único, incluí el hashtag en tus posts y compartir con nosotros tus recuerdos"
-                      }
-                    </span>
                     <img
-                      className={`${classes.cardIcon} ${classes.mt10}`}
-                      src={card.image}
-                      alt={card.id}
+                      className={classes.cardIcon}
+                      src={photo.img}
+                      alt={photo.id}
                     />
-
-                    <span
-                      className={classes.cardText}
-                      onTouchStart={() => setDesc(card.description)}
-                      onTouchEnd={() => handleDesc(index)}
-                    >
-                      {desc}
-                    </span>
                     <button className={`${classes.cardButton}`}>
                       <a
-                        href={card.link}
+                        href={picturesSection.linkHashtags}
                         target="_blank"
                         rel="noreferrer"
                         className={`${classes.cardLink}`}
                       >
                         {"Ver en Instagram"}
-                      </a>
-                    </button>
-                    <button className={`${classes.cardButton} ${classes.mt10}`}>
-                      <a
-                        href={
-                          "https://www.instagram.com/explore/tags/ximeytucu/"
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className={`${classes.cardLink}`}
-                      >
-                        {"#ximeytucu"}
                       </a>
                     </button>
                   </div>
@@ -244,10 +186,6 @@ const RetratosM = () => {
             </CarouselComponent>
           )}
         </div>
-        <div
-          ref={refSection}
-          className={`${isSectionVisible ? classes.bgShadow : ""}`}
-        />
       </Grid>
     </div>
   );

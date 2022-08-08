@@ -1,5 +1,5 @@
-import portada from "../assets/images/party/bg.jpeg";
-import portadaM from "../assets/images/party/bgM.jpeg";
+import portada from "../assets/images/party/bg.webp";
+import portadaM from "../assets/images/party/bgM.webp";
 import weddingGif from "../assets/images/party/party2.gif";
 import whiteCard from "../assets/images/party/card.png";
 
@@ -13,12 +13,12 @@ const card = new Image();
 card.src = whiteCard;
 
 export const partySection = {
-	bg: {
-		bg: bg.src,
-		bgM: bgM.src,
-	},
-	icons: {
-		gif: gif.src,
-		card: card.src,
-	},
+  bg: {
+    bg: bg.src,
+    bgM: bgM.src,
+  },
+  icons: {
+    gif: gif.src,
+    card: card.src,
+  },
 };

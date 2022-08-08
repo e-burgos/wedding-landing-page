@@ -1,14 +1,8 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Grid, makeStyles } from "@material-ui/core";
-import {
-  formatInitialData,
-  FormatPost,
-  picturesSection,
-} from "../../data/picturesSection";
-import { useIntersectionObserver } from "../../hooks/IntersectionObserver.hook";
+import { picturesSection } from "../../data/picturesSection";
 import CarouselDesktopNavigator from "../common/CarouselDesktopNavigator";
-import { useInstagraApi } from "../../hooks/useInstagramApi";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     backgroundImage: `url(${picturesSection.bg.bg})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
     height: "100vh",
     zIndex: -2,
     display: "flex",
@@ -48,16 +43,21 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "HeadingFont",
     color: "#dbdbdb",
     fontSize: "18pt",
-    textAlign: "center",
-    padding: "0px 30px",
+    textAlign: "right",
+    width: "100%",
+    marginLeft: "20px",
     zIndex: 50,
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      marginLeft: "0px",
+    },
   },
   cardsContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "50px",
+
     zIndex: 50,
   },
   card: {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     backgroundImage: "linear-gradient(to bottom right, #BF862D, #ECC878)",
-    width: "400px",
+    width: "100%",
     borderRadius: "15px",
     margin: "20px",
     padding: "25px",
@@ -92,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "12px",
     border: "1px solid#E0D6B2",
     color: "#BF862D",
+    background: "white",
     fontSize: "12pt",
     textAlign: "center",
     width: "90%",
@@ -115,22 +116,34 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardIcon: {
-    width: "350px",
+    maxHeight: "40vh",
     borderRadius: "12px",
+    marginBottom: "20px",
   },
   mainContainer: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
     margin: "10%",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
   },
-  leftContainer: {
-    width: "50%",
+  topContainer: {
+    width: "30%",
     display: "flex",
+    marginRight: "20px",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-end",
+    [theme.breakpoints.down("md")]: {
+      marginRight: "0px",
+      width: "80%",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
   w50: {
     width: "50%",
@@ -141,82 +154,61 @@ const useStyles = makeStyles((theme) => ({
 
 const Retratos = () => {
   const classes = useStyles();
-  const refSection = useRef(null);
   const [index, setIndex] = useState<number>(0);
-  const [desc, setDesc] = useState<string>("");
-  const [data, setData] = useState<FormatPost[]>(formatInitialData);
+  const data = picturesSection.photos;
 
-  const { data: posts, dataSuccess } = useInstagraApi(
-    "http://localhost:4000/hashtag_post",
-    //"https://instagram47.p.rapidapi.com/hashtag_post?hashtag=ximeytucu",
-    false,
-    1000 * 60 * 1
-  );
-
-  const isSectionVisible = useIntersectionObserver(
-    refSection,
-    { threshold: 0 },
-    true
-  );
-
-  const handleDesc = (index: number) => {
-    setDesc(
-      `${
-        data[index].description.length > 90
-          ? `${data[index].description.substring(0, 90)}...`
-          : data[index].description
-      }`
-    );
-  };
-
-  useEffect(() => {
-    handleDesc(index);
-    if (dataSuccess) setData(posts);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, dataSuccess]);
-
-  console.log(posts);
+  //const refSection = useRef(null);
+  // const isSectionVisible = useIntersectionObserver(
+  //   refSection,
+  //   { threshold: 0 },
+  //   true
+  // );
+  // const [desc, setDesc] = useState<string>("");
+  // const [data, setData] = useState<FormatPost[]>(formatInitialData);
+  // const { data: posts, dataSuccess } = useInstagraApi(
+  //   //"http://localhost:4000/hashtag_post",
+  //   "https://instagram47.p.rapidapi.com/hashtag_post?hashtag=ximeytucu",
+  //   true,
+  //   1000 * 60 * 30
+  // );
+  // useEffect(() => {
+  //   handleDesc(index);
+  //   if (dataSuccess) setData(posts);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [index, dataSuccess]);
+  // const handleDesc = (index: number) => {
+  //   setDesc(
+  //     `${
+  //       data[index].description.length > 90
+  //         ? `${data[index].description.substring(0, 90)}...`
+  //         : data[index].description
+  //     }`
+  //   );
+  // };
 
   return (
-    <div className={classes.root} id="page1">
+    <div className={classes.root} id="retatos">
       <Grid className={classes.background}>
         <div className={classes.mainContainer}>
-          <div className={classes.leftContainer}>
+          <div className={classes.topContainer}>
             <span className={classes.title}>{"#ximeytucu"}</span>
             <span className={classes.text}>
               {
                 "Construyamos juntos este momento único, incluí el hashtag en tus posts y compartir con nosotros tus recuerdos"
               }
             </span>
-            <button className={`${classes.cardButton} ${classes.w50}`}>
-              <a
-                href={"https://www.instagram.com/explore/tags/ximeytucu/"}
-                target="_blank"
-                rel="noreferrer"
-                className={`${classes.cardLink}`}
-              >
-                {"#ximeytucu"}
-              </a>
-            </button>
           </div>
           {data.length !== 0 && (
             <div className={classes.cardsContainer}>
               <div className={classes.card}>
                 <img
                   className={classes.cardIcon}
-                  src={data[index].image}
+                  src={data[index].img}
                   alt={data[index].id}
                 />
-                <span
-                  className={classes.cardText}
-                  onMouseEnter={() => setDesc(data[index].description)}
-                  onMouseLeave={() => handleDesc(index)}
-                >
-                  {desc}
-                </span>
                 <button className={`${classes.cardButton}`}>
                   <a
-                    href={data[index].link}
+                    href={picturesSection.linkHashtags}
                     target="_blank"
                     rel="noreferrer"
                     className={`${classes.cardLink}`}
@@ -235,10 +227,10 @@ const Retratos = () => {
             updateIndex={setIndex}
           />
         )}
-        <div
+        {/* <div
           ref={refSection}
           className={`${isSectionVisible ? classes.bgShadow : ""}`}
-        />
+        /> */}
       </Grid>
     </div>
   );

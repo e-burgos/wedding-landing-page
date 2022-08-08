@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     backgroundImage: `url(${counterSection.bg.bgM})`,
     backgroundSize: "cover",
+    backgroundPosition: "center",
     height: "100vh",
     zIndex: -2,
     display: "flex",

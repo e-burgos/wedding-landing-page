@@ -1,7 +1,7 @@
-import portada from '../assets/images/gifts/bg.jpeg';
-import portadaM from '../assets/images/gifts/bgM.jpeg';
-import iconLineal from '../assets/images/gifts/img_linea01.svg';
-import weddingGig from '../assets/images/gifts/weddingGig.gif';
+import portada from "../assets/images/gifts/bg.webp";
+import portadaM from "../assets/images/gifts/bgM.webp";
+import iconLineal from "../assets/images/gifts/img_circuloRegalo.svg";
+import weddingGig from "../assets/images/gifts/weddingGig.gif";
 
 const bg = new Image();
 bg.src = portada;

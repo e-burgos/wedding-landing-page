@@ -13,10 +13,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   paginatorContainer: {
     position: "absolute",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     bottom: "40px",
     zIndex: 9,
     width: "90%",
-    maxWidth: "1440px",
   },
   controlLeft: {
     float: "right",
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   indexSelector: {
-    margin: "0 12px",
+    margin: "0 5px",
     width: "30%",
     maxWidth: "223px",
     height: "9px",
@@ -96,13 +99,7 @@ const CarouselDesktopNavigator = ({
   const classes = useStyles();
 
   return (
-    <Grid
-      direction="row"
-      container
-      alignItems="center"
-      justifyContent="center"
-      className={classes.paginatorContainer}
-    >
+    <Grid className={classes.paginatorContainer}>
       <Grid item className={classes.iconContainer}>
         <FontAwesomeIcon
           className={classes.icon}
