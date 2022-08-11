@@ -76,19 +76,10 @@ const CountdownComponent = () => {
     }
   };
 
-  //const fechaInicio = new Date("2022-10-31").getTime();
-  const fechaInicio = Date.now();
-  const fechaFin = new Date("2022-11-19").getTime();
-  const diff = fechaFin - fechaInicio;
-  const formartDiff = Math.trunc(diff / (1000 * 60 * 60 * 24));
-  const d = new Date();
-  const year = d.getFullYear();
-  const month = d.getMonth();
-  const day = d.getDate();
-  const coundown = new Date(year, month, day + formartDiff).getTime();
+  const fechaFin = new Date("2022-11-19T19:00:00").getTime();
   return (
     <Fragment>
-      <Countdown date={coundown} renderer={renderer} />
+      <Countdown date={fechaFin} renderer={renderer} />
     </Fragment>
   );
 };
