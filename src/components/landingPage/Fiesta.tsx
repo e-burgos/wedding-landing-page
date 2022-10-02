@@ -113,8 +113,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     textAlign: "center",
     width: "100%",
-    marginBottom: "10px",
-    marginTop: "10px",
+    marginBottom: "5px",
+    marginTop: "5px",
   },
 }));
 
@@ -152,6 +152,11 @@ const Fiesta = () => {
               <div className={classes.cardContent}>
                 <span className={classes.cardTitle}>{"Xime & Esteban"}</span>
                 <div className={classes.cardInfo}>
+                  <div>
+                    <span className={classes.cardText}>
+                      {"Ceremonia y Fiesta"}
+                    </span>
+                  </div>
                   <div>
                     <span className={classes.cardText}>
                       {"Sábado 19 de Noviembre, 19hs"}

@@ -140,18 +140,18 @@ const RegalosM = () => {
     { threshold: 0 },
     true
   );
-  const [copyCBU, setCopyCBU] = useState<string>("0000053600000003089699");
-  const [copyAlias, setCopyAlias] = useState<string>("20314875029.LEMON");
+  const [copyCBU, setCopyCBU] = useState<string>("0000168300000003627767");
+  const [copyAlias, setCopyAlias] = useState<string>("ubicar.cuape.LEMON");
 
   useEffect(() => {
     if (!copyCBU) {
       setTimeout(() => {
-        setCopyCBU("0000053600000003089699");
+        setCopyCBU("0000168300000003627767");
       }, 3000);
     }
     if (!copyAlias) {
       setTimeout(() => {
-        setCopyAlias("20314875029.LEMON");
+        setCopyAlias("ubicar.cuape.LEMON");
       }, 3000);
     }
   }, [copyCBU, copyAlias]);
@@ -186,12 +186,12 @@ const RegalosM = () => {
                 src={giftsSection.icons.lineal}
                 alt="cuenta"
               />
-              <span className={classes.cardText}>{"BANCO: AGILPAGOS"}</span>
-              <span id="alias" className={classes.cardText}>
-                {"CBU: 0000053600000003089699"}
-              </span>
+              <span className={classes.cardText}>{"BANCO: LEMON"}</span>
               <span id="CBU" className={classes.cardText}>
-                {"ALIAS: 20314875029.LEMON"}
+                {"CBU: 0000168300000003627767"}
+              </span>
+              <span id="alias" className={classes.cardText}>
+                {"ALIAS: ubicar.cuape.LEMON"}
               </span>
               <span className={`${classes.cardText} ${classes.mb}`}>
                 {"TITULAR: ESTEBAN BURGOS"}
@@ -200,7 +200,7 @@ const RegalosM = () => {
                 className={`${classes.cardButton}`}
                 onClick={() => copyToClipboard("CBU")}
               >
-                {copyCBU ? "Copiar Cuenta" : "Copiado"}
+                {copyCBU ? "Copiar CBU" : "Copiado"}
               </button>
               <button
                 className={`${classes.cardButton} ${classes.mb}`}
