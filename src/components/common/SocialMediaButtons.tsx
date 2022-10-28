@@ -6,8 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCamera,
   faLocationCrosshairs,
-  faBus,
+  faGift,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,11 +82,20 @@ const SocialMediaButtons = () => {
               </a>
             </Grid>
 
-            <Grid item className={classes.iconContainer}>
-              <a href={social.links.bus} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon className={classes.icon} icon={faBus} />
-              </a>
-            </Grid>
+            <Link
+              activeClass="active"
+              to="page5"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onFocus={() => void 0}
+              aria-hidden="true"
+            >
+              <Grid item className={classes.iconContainer}>
+                <FontAwesomeIcon className={classes.icon} icon={faGift} />
+              </Grid>
+            </Link>
           </Grid>
         </div>
       </div>

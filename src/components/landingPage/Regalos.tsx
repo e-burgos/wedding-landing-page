@@ -145,6 +145,10 @@ const useStyles = makeStyles((theme) => ({
   mb: {
     marginBottom: "20px",
   },
+  row: {
+    display: "flex",
+    flexDirection: "row",
+  },
 }));
 
 const Regalos = () => {
@@ -202,12 +206,20 @@ const Regalos = () => {
                 alt="cuenta"
               />
               <span className={classes.cardText}>{"BANCO: LEMON"}</span>
-              <span id="alias" className={classes.cardText}>
-                {"CBU: 0000168300000003627767"}
-              </span>
-              <span id="CBU" className={classes.cardText}>
-                {"ALIAS: ubicar.cuape.LEMON"}
-              </span>
+              <div className={classes.row}>
+                <span className={classes.cardText}>{"CBU: "}</span>
+                &nbsp;
+                <span id="CBU" className={classes.cardText}>
+                  {"0000168300000003627767"}
+                </span>
+              </div>
+              <div className={classes.row}>
+                <span className={classes.cardText}>{`ALIAS: `}</span>
+                &nbsp;
+                <span id="alias" className={classes.cardText}>
+                  {"tucu.burgos"}
+                </span>
+              </div>
               <span className={`${classes.cardText} ${classes.mb}`}>
                 {"TITULAR: ESTEBAN BURGOS"}
               </span>
